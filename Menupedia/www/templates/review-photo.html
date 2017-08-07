@@ -1,0 +1,135 @@
+<ion-view view-title="ReviewPhoto" hide-nav-bar="true">
+	<style>
+		.rp_header {
+			width: 100vw;
+			height: 20vh;
+			transition: 0.2s linear height;
+		}
+		.rp_header.animate {
+			height: 5vh;
+			transition: 0.2s linear height;
+		}
+		.rp_middle {
+			width: 100vw;
+			height: 50vh;
+		}
+		.rp_bottom {
+			//border: 1px solid black;
+			width: 100vw;
+			height: 30vh;
+			transition: 0.2s linear height;
+			flex-direction: column;
+		}
+		.rp_bottom input {
+			border-bottom: 1px solid black;
+		}
+		.rp_bottom.animate {
+			height: 45vh;
+			transition: 0.2s linear height;
+		}
+		.rp_middle .flip-container {
+			width: 90vw;
+			height: 90%;
+		}
+		.images_container {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		.images_container .img_div {
+			float: left;
+			width: 30vw;
+			height: 30vw;
+			overflow: hidden;
+		}
+		.images_container .img_div img {
+			height: 100%;
+		}
+		.back .bigImage {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		.bigImage img {
+			height: 100%;
+		}
+	</style>
+	<ion-content>
+		<div class="slide_menu_button">
+			<div class="title_icon_group" open-menu>
+				<ion-icon class="ion-navicon"></ion-icon>
+			</div>
+		</div>
+
+		<div class="rp_body full-screen">
+			<div class="rp_header best-center " ng-class="{animate: fliping}">
+				Pick a Image
+			</div>
+			<div class="rp_middle best-center " ng-class="{animate: fliping}">
+				<div class="flip-container " ng-class="{flip : fliping}">
+
+					<div class="flipper">
+						<div class="front ">
+							<ion-scroll class="images_container">
+								<div class="img_div" collection-repeat="dish in allPendingDish track by $index" ng-click="selectAnImg($index)">
+									<img src="{{get_image_url(dish.img)}}">
+								</div>
+							</ion-scroll>
+						</div>
+						<div class="back" ng-click="toggle()">
+							<div class="bigImage">
+								<img ng-src="{{selectedImgUrl}}">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<li class="item item-toggle">
+					Set as master Image
+					<label class="toggle">
+						<input type="checkbox" ng-model="data.setAsMaster">
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>{{preSetInfor.setmaster}}
+				</li>
+
+			</div>
+
+
+			<label class="item item-input item-select">
+				<div class="input-label">
+					Chooce from current menu
+				</div>
+				<select ng-model="data.selectExistedDishByIndex" ng-change="clickCurrentDish(data.selectExistedDishByIndex)">
+					<option  value=-1></option>
+					<option ng-repeat=" dish in dish_list track by $index" value="{{$index}}">{{dish.name}}</option>
+				</select>
+			</label>
+			<div class="rp_bottom" ng-class="{animate: fliping}">
+				<input type="text" value="" placeholder="name" ng-model="preSetInfor.name">
+				<input type="text" placeholder="price" ng-model="preSetInfor.price">
+				<input type="text" placeholder="description" ng-model="preSetInfor.description">
+
+				<input type="text" placeholder="reward" ng-model="preSetInfor.reward" >
+				<div class="list">
+					<li class="item item-toggle">
+						Giving a mystery gift
+						<label class="toggle">
+							<input type="checkbox" ng-click="test()" ng-model="data.mysteryGift">
+							<div class="track">
+								<div class="handle"></div>
+							</div>
+						</label>{{data.mysteryGift}}
+					</li>
+
+				</div>
+				<button class="button button-small button-assertive" ng-click="confirmReview()">Save</button>
+			</div>
+		</div>
+		{{link}}
+	</ion-content>
+
+</ion-view>

@@ -1,0 +1,62 @@
+.dish {
+  float: left;
+  width: 50%;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.dish img {
+  height: 100%;
+  width: 100%;
+}
+
+.take-photo {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 18pt;
+  text-align: center;
+  background: rgba(234, 198, 112, 0.90);
+  color: white;
+}
+
+.take-photo img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.selection-content {
+  min-height: 85vh;
+  background: transparent;
+}
+
+.gallery-container {
+  padding-bottom: 64px;
+}
+
+.confirm_div {
+  bottom: -50vh;
+  transition: 0.25s ease-out;
+}
+
+.confirm_div .col1,
+.confirm_div .col2 {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.confirm_div .col1 img {
+  width: 35vw;
+  height: 35vw;
+  -webkit-box-shadow: 3px 4px 13px 0px rgba(150,150,150,1);
+  -moz-box-shadow: 3px 4px 13px 0px rgba(150,150,150,1);
+  box-shadow: 3px 4px 13px 0px rgba(150,150,150,1);
+}
+
+.confirm_div input {
+  border-bottom: 1px solid black;
+}

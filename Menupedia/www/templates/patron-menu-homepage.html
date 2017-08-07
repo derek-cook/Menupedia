@@ -1,0 +1,21 @@
+<ion-view view-title="Menu" hide-nav-bar="false" hide-back-button="false">
+	<div id="background-image" class="full-screen">
+		<div id="background-darken" class="full-screen">
+			<ion-content>
+				<div class="selection-title">
+					{{restaurant.name}}
+				</div>
+				<div class="selection-content">
+					<div class=" clearfix gallery-container">
+						<a ng-repeat="dish in dish_list" class="dish button-effect" ng-href="#/app/dish_detail/{{dish.$id}}">
+							<img ng-src="{{get_image_url(dish.img)}}">
+						</a>
+					</div>
+				</div>
+			</ion-content>
+		</div>
+	</div>
+	<div class="take-photo gold-border button-effect" ng-click="showPhotoTaken()">
+		Take photo
+	</div>
+</ion-view>

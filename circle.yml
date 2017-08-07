@@ -1,0 +1,7 @@
+test:
+    override:
+        - bash test.bash
+
+dependencies:
+    pre:
+        - cd ./Menupedia && npm install

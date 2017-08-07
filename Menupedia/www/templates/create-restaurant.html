@@ -1,0 +1,49 @@
+
+
+<ion-view view-title="Profile" hide-nav-bar="true">
+	
+	
+	<ion-content class="">
+		<div class="slide_menu_button">
+		<div class="title_icon_group" open-menu >
+			<ion-icon class="ion-navicon" style="color:black;"></ion-icon>
+		</div>
+	</div>
+		<div class="resturant_logo">
+			<img src="http://images.shape.mdpcdn.com/sites/shape.com/files/styles/slide/public/media/lexiscleankitchen-700_0.jpg">
+		</div>
+
+		
+		<div class="restaurant_data">
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Restaurant Name</span>
+				<input ng-model="rest.name" type="text" placeholder="Restaurant Name">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Restaurant Address</span>
+				<input ng-model="rest.address" type="text" placeholder="Restaurant Address">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Phone</span>
+				<input ng-model="rest.tel" type="tel" placeholder="Phone">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Owner Name</span>
+				<input ng-model="rest.ownerName" type="text" placeholder="Owner Name">
+			</label>
+
+			<label class="item item-input item-floating-label">
+				<span class="input-label">ID of Owner</span>
+				<input ng-model="rest.ownerSSN" type="text" placeholder="ID of Owner">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Opening Hours</span>
+				<input ng-model="rest.openHours" type="text" placeholder="Opening Hours">
+			</label>
+			<div class="create_button " >
+				<a class="button-effect" ng-click="createRestaurant()">create your restaurant</a>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

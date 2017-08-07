@@ -1,0 +1,39 @@
+.resturant_logo {
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.resturant_logo img {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+}
+
+.restaurant_data {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.restaurant_data .item {
+  border: none;
+  border-bottom: 1px solid #EAC670;
+}
+
+.restaurant_data .input-label {
+  color: rgba(89, 120, 170, 0.86);
+}
+
+.create_button {
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.create_button a {
+  background: #EAC670;
+  color: #21201e;
+  padding: 15px;
+  font-size: 1.5em;
+  font-family: "Champagne";
+}

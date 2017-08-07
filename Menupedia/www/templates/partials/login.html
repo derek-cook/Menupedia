@@ -1,0 +1,34 @@
+<ion-modal-view class="login_background">
+	<div id="login_background" class="full-screen" ng-controller="AuthCtrl">
+		<div id="background-lighten" class="full-screen">
+			<div class="login_title">
+				MENUPEDIA
+			</div>
+
+			<div class="login_body">
+				<div class="login_substitle">By sign in your account, you can upload photos to get a free meal or create your own restaurant</div>
+				<ion-slide-box delegate-handle="SLIDE" id="login_signup_slide" show-pager="false" on-slide-changed="slideHasChanged($index)">
+					<ion-slide>
+						<div class="login_form">
+							<input type="text" class="email_input" placeholder="email" ng-model="data.email">
+							<input type="password" class="password_input" placeholder="password" ng-model="data.password">
+						</div>
+						<div class="login-button button-effect" ng-click="signIn()">Login</div>
+						<div class="sign-switch"><a>Swipe to Sign Up</a>
+						</div>
+					</ion-slide>
+					<ion-slide>
+						<div class="login_form">
+							<input type="text" class="email_input" placeholder="email" ng-model="data.newEmail">
+							<input type="password" class="password_input" placeholder="password" ng-model="data.newPassword">
+							<input type="password" class="password_input" placeholder="repeat password" ng-model="data.newRepeatPassword">
+
+						</div>
+						<div class="login-button button-effect" ng-click="register()">Sign Up</div>
+					</ion-slide>
+				</ion-slide-box>
+			</div>
+		</div>
+	</div>
+
+</ion-modal-view>

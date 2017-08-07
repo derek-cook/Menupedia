@@ -1,0 +1,24 @@
+<ion-view view-title="Select" hide-nav-bar="true" >
+	<div class="slide_menu_button">
+		<div class="title_icon_group" open-menu >
+			<ion-icon class="ion-navicon" style="color:white;"></ion-icon>
+		</div>
+	</div>
+  <div id="background-image" class="full-screen">
+    <div id="background-darken" class="full-screen">
+      <div class="selection-title">
+        Menupedia
+      </div>
+      <div class="selection-subtitle">
+        Pick your restaurants
+      </div>
+      <ion-scroll id="selection-result-box" class="gold-border">
+        <a ng-repeat="res in restaurants"
+           class="button-effect gold-border"
+           ui-sref="app.patron_menu({ restaurantId:res.id})">
+          {{res.name}}
+        </a>
+      </ion-scroll>
+    </div>
+  </div>
+</ion-view>

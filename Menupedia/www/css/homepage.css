@@ -1,0 +1,35 @@
+#homepage-topimage img {
+  width: 100%;
+  min-height: 30vh;
+}
+
+#homepage-body {
+  text-align: center;
+  height: 50vh;
+}
+
+#homepage-body a {
+  display: block;
+  margin: 20px auto;
+  padding: 5px 0;
+  width: 80%;
+  font-size: 20px;
+  font-family: raleway;
+  border-radius: 0;
+}
+
+#homepage-body a:nth-child(1) {
+  background: #F07B5F;
+  color: white;
+}
+
+#homepage-body a:nth-child(2) {
+  background: #6C606D;
+  color: white;
+}
+
+#homepage-body a:nth-child(n+3) {
+  font-size: 16px;
+  color: #EAC670;
+  padding: 8px;
+}

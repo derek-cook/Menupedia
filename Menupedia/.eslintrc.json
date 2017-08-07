@@ -1,0 +1,14 @@
+{
+    "globals": {
+        "cordova": true,
+        "FileReader": true,
+		"firebase": true
+    },
+    "extends": ["angular", "eslint:recommended"],
+    "rules": {
+        "angular/controller-name": 0,
+        "angular/controller-as": 0,
+        "indent": ["error", 2],
+        "strict": ["error", "global"]
+    }
+}

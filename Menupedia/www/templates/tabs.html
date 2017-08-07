@@ -1,0 +1,83 @@
+<ion-side-menus enable-menu-with-back-views="flase" enable-menu-with-back-views="true">
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-stable">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="menuContent"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left" class="tab-bg">
+		<div class="tab-background-fixed">
+			<div class="tab_menu_container">
+				<div class="tab_menu_list patron" ng-show="!profile">
+					<ion-list>
+						<ion-item ng-click="login()">
+							Log in
+						</ion-item>
+					</ion-list>
+				</div>
+
+				<div class="tab_menu_list patron" ng-show="userPatronMode && profile">
+					<ion-list>
+						<ion-item menu-close ui-sref="app.homepage">
+							Discover
+						</ion-item>
+
+						<ion-item menu-close ui-sref="app.patron_menu({ restaurantId:'002'})">
+							Favorite
+						</ion-item>
+
+						<ion-item menu-close ui-sref="app.user_reward">
+							My upload
+						</ion-item>
+
+						<ion-item menu-close ui-sref="app.user_reward">
+							Rewards
+						</ion-item>
+
+						<ion-item ng-click="logout()">
+							Log out
+						</ion-item>
+					</ion-list>
+				</div>
+
+				<div class="tab_menu_list owner" ng-show="!userPatronMode && profile!=null">
+
+					<ion-list>
+						<ion-item menu-close ui-sref="app.resturant_create" ng-show="!profile.restaurantId">
+							Create Your Resturant
+						</ion-item>
+						<ion-item menu-close ui-sref="app.patron_menu({ restaurantId: profile.restaurantId })" ng-show="profile.restaurantId">
+							Edit Menu
+						</ion-item>
+						<ion-item menu-close ui-sref="app.reviewPhoto" ng-show="profile.restaurantId">
+							Photos
+						</ion-item>
+
+						<ion-item menu-close ui-sref="app.patron_profile" ng-show="profile.restaurantId">
+							Readme
+						</ion-item>
+						<ion-item menu-close ui-sref="app.resturant_create" ng-show="profile.restaurantId">
+							Restaurant setting
+						</ion-item>
+						<ion-item ng-click="logout()">
+							Log out
+						</ion-item>
+					</ion-list>
+
+				</div>
+
+
+
+				<div class="switch_role_button toOnwer" ng-click="switchToOwner($event)">
+					<div class="content {{userPatronMode? '':'owner'}}">
+
+						<div class="title">{{userPatronMode? 'Switch to onwer':'Switch to patron'}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-side-menu>
+</ion-side-menus>

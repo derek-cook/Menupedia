@@ -1,0 +1,85 @@
+.dish-detail * {
+  text-align: center;
+}
+
+.dish-detail-image {
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.dish-detail-image img {
+  width: 100%;
+}
+
+.dish-detail-image div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 50px;
+  color: white;
+}
+
+.dish-detail-body {
+  height: 50vh;
+}
+
+.subImagegallery {
+  height: 15vh;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.subImagegallery img {
+  height: 15vh;
+  width: 15vh;
+}
+
+.dish-detail-body .name {
+  display: block;
+  font-weight: bold;
+}
+
+.dish-detail-body .name {
+  padding: 40px;
+  font-size: 25px;
+  font-family: monospace;
+}
+
+.dish-detail-body .description {
+  padding: 20px;
+  font-size: 16px;
+  font-family: raleway;
+}
+
+.dd_feedback {
+  height: 80px;
+}
+
+.dd_feedback .remove-button,
+.dd_feedback .thumbsup,
+.dd_feedback .thumbsdown {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  color: red;
+}
+
+.dd_feedback ion-icon {
+  font-size: 3em;
+  padding-right: 10px;
+}
+
+.ion-heart.animated {
+  color: rgba(222, 97, 97, 0.97);
+}
+
+.ion-heart-broken.animated {
+  color: #736fe2;
+}

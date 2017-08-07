@@ -1,0 +1,15 @@
+#selection-result-box {
+  height: 75%;
+  background: rgba(255, 252, 245, 0.17);
+  margin: 0 auto;
+  width: 90%;
+}
+
+#selection-result-box a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  color: #dbcb54;
+  text-decoration: none;
+}

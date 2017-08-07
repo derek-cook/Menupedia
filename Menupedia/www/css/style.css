@@ -1,0 +1,184 @@
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.best-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.gold-border {
+  border: #EAC670 1px solid;
+}
+
+.white-border {
+  border: 1px solid white;
+}
+
+.homepage-content {
+  background: url("../img/theme_background2.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#background-darken {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#background-lighten {
+  background: rgba(125, 126, 149, 0.43);
+}
+
+#background-image {
+  background: url(../img/background3.jpg) center;
+}
+
+/*Nav bar customize
+*/
+.bar.bar-stable {
+  background: rgb(255, 215, 0);
+  border-width: 0px;
+  font-family: Celtic;
+}
+
+.selection-title {
+  height: 15vh;
+  padding-top: 10%;
+  font-size: 50px;
+  font-family: copper;
+  text-align: center;
+  color: #EAC670;
+}
+
+.selection-subtitle {
+  text-align: center;
+  height: 5%;
+  font-family: raleway;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.button-effect {
+  position: relative;
+}
+
+.button-effect:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0px;
+  background: rgba(237, 237, 237, 0.28);
+}
+
+.button-effect:hover:before {
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.selection_subtitle {
+  text-align: center;
+  height: 5vh;
+  font-family: raleway;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.selection_result_box {
+  height: 75vh;
+  background: rgba(255, 252, 245, 0.17);
+  border: #EAC670 1px solid;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.selection_result_box .selection_item {
+  display: block;
+  border: #EAC670 1px solid;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  color: #dbcb54;
+  position: relative;
+  text-decoration: none;
+}
+
+.menu_gallery {
+  border: 1px solid white;
+}
+
+.menu_gallery .dish {
+  float: left;
+  width: 50%;
+  height: 20vh;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.menu_gallery .dish img {
+  height: 100%;
+  min-width: 50vw;
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper,
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}

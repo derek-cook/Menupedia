@@ -1,0 +1,38 @@
+<ion-view view-title="{{dish.name}}" hide-nav-bar="false" hide-back-button="false">
+	<ion-content class="dish-detail">
+		<div class="dish-detail-image">
+			<img ng-src="{{get_image_url(dish.img)}}">
+			<div>
+				${{dish.price}}
+			</div>
+		</div>
+
+		<div class="dish-detail-body">
+		<ion-scroll class="subImagegallery" direction="x" >
+			<img ng-repeat="sub in dish.subImg track by $index" ng-src="{{get_image_url(sub)}}">
+		</ion-scroll>
+			
+		<div class="dd_feedback">
+			<div ng-show="ready() && !amOwner()" class="thumbsup">
+			<ion-icon thumbs="up" class="ion-heart" ng-click="vote(dishId,'good')" ></ion-icon>{{dish.good || 0 }}
+			</div>
+			<div ng-show="ready() && !amOwner()" class="thumbsdown">
+			<ion-icon thumbs="down" class="ion-heart-broken" ng-click="vote(dishId,'bad')"></ion-icon>{{dish.bad || 0}}
+			</div>
+			<div ng-show="ready() && amOwner()" class="thumbsdown">
+				<ion-icon class="remove-button ion-close red" ng-click="remove()"></ion-icon>Remove
+			</div>
+			<div ng-show="ready() && amOwner()" class="thumbsdown">
+			</div>
+		</div>	
+			<div class="name">
+				{{dish.name}}
+			</div>
+			<div class="description">
+				{{dish.description}}
+			
+			</div>
+			
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,60 @@
+<ion-view view-title="Restaurant" hide-nav-bar="true" >
+	
+	<style>
+		.om_main {
+			position:absolute;
+			display: flex;
+			flex-direction: column;
+			font-size: 20px;
+			font-family: Champagne;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.om_main_row{
+			flex:1;
+			flex-direction: column;
+		}
+
+		.om_main_row.c1{
+			background:rgba(95, 221, 177, 0.64);
+		}
+
+		.om_main_row.c2{
+			background:rgba(73, 168, 237, 0.64);
+		}
+		
+		.om_main_row.c3{
+			background:rgba(116, 90, 226, 0.64);
+		}
+
+		.om_main_row.c4{
+			background:rgba(239, 233, 88, 0.64);
+		}
+
+		.om_main_row.c5{
+			background:rgba(239, 88, 158, 0.64);
+		}
+	</style>
+	<div class="slide_menu_button">
+		<div class="title_icon_group" open-menu >
+			<ion-icon class="ion-navicon"></ion-icon>
+		</div>
+	</div>
+	<div class="om_main ">
+		<div class="om_main_row c1  best-center">
+			<div>Welcome back</div>
+			<div>You have new {{link}} photos</div>
+		</div>
+		<div class="om_main_row c2  best-center " ui-sref="app.patron_menu({ restaurantId: profile.restaurantId })">
+			Edit Menu
+		</div>
+		<div class="om_main_row c3  best-center" ui-sref="app.reviewPhoto" >
+			Pending Photos
+		</div>
+		
+		<div class="om_main_row c5  best-center" on-tap="scanBarCode()">
+			Scan Reward
+		</div>
+	</div>
+</ion-view>

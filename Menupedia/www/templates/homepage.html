@@ -1,0 +1,16 @@
+<ion-view view-title="home" hide-nav-bar="true" hide-back-button="true">
+	<ion-content class="homepage-content" scroll="false">
+		<div id="homepage-topimage">
+			<img src="img/banner.png">
+		</div>
+		<div class="selection-title">
+			Menupedia
+		</div>
+		<div id="homepage-body">
+			<a class="button" ng-href="#/app/restaurant_selection">Check out Menus</a>
+			<a class="button" ng-click="goToRandomDish()">I'm feeling lucky</a>
+			<a ng-click="openModal()" ng-show="!authProfile.uid ">Sign in</a>
+			<a ng-show="authProfile.uid " ng-click="signOut()">Sign Out</a>
+		</div>
+	</ion-content>
+</ion-view>

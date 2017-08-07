@@ -1,0 +1,39 @@
+@font-face {
+  font-family: copper;
+  src: local("copper"),
+       url(font/copperplatecondensedssiboldcondensed.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: thinline;
+  src: local("thinline"),
+       url(font/Thin_Line_Font.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: raleway;
+  src: local("raleway"),
+       url(font/Raleway_Thin.otf);
+}
+
+@font-face {
+  font-family: panton;
+  src: local("panton"),
+       url(font/Panton-LightCaps.otf);
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+  font-family:"Celtic";
+	src:url("font/CELTG.ttf")
+}
+
+@font-face {
+  font-family:"Champagne"; 
+	src:url("font/Champagne_Limousines.ttf");
+}
+
+
+

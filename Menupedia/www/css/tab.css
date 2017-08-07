@@ -1,0 +1,114 @@
+.tab-bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: url('../img/gradient-tab-bg.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  filter: opacity(50%);
+}
+
+.tab_menu_container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab_menu_list {
+  border: 0px solid black;
+  width: 100%;
+  font-family: "Champagne";
+}
+
+.tab_menu_list ion-item .item-content.activated {
+  background: rgba(168, 168, 214, 0.24);
+  border: 0px solid black;
+}
+
+.tab_menu_list ion-item,
+.tab_menu_list ion-item .item-content {
+  border: 0px solid black;
+  background: transparent;
+  text-align: center;
+  font-size: 20px;
+}
+
+.tab_menu_list ion-item .item-content {
+  padding: 16px;
+}
+
+.tab_menu_list.patron {
+  overflow: hidden;
+  -webkit-animation: fadeInLeft 0.5s;
+  animation: fadeInLeft 0.5s;
+}
+
+.tab_menu_list.patron.ng-hide {
+  width: 0;
+  -webkit-animation: fadeOutLeft 0.5s;
+  animation: fadeOutLeft 0.5s;
+  transition: 1s width 0px;
+}
+
+.tab_menu_list.owner {
+  -webkit-animation: fadeInRight 0.5s;
+  animation: fadeInRight 0.5s;
+}
+
+.tab_menu_list.owner.ng-hide {
+  width: 0;
+  -webkit-animation: fadeOutRight 0.5s;
+  animation: fadeOutRight 0.5s;
+}
+
+.switch_role_button {
+  z-index: 2;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  width: 60%;
+  height: 50px;
+  transition: 0.3s ease-out;
+  font-family: Champagne;
+}
+
+.switch_role_button .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #21201e;
+  color: #EAC670;
+  letter-spacing: 1px;
+  transition: 0.5s ease-in;
+}
+
+.switch_role_button .content.owner {
+  background: #EAC670;
+  color: #21201e;
+  transition: 0.5s ease-in;
+}
+
+
+
+
+
+
+
+
+
